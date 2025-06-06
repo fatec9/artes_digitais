@@ -1,17 +1,15 @@
-/* Import Google Fonts - Playfair Display for headings, Inter for body */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600&display=swap');
 
-/* Root variables for Dark gray + Gold neumorphic Art Deco palette */
 :root {
-  --color-bg: #121212; /* near-black charcoal */
-  --color-card-bg: #1f1f1f; /* dark card background */
-  --color-shadow-light: #2b2b2b; /* subtle light shadow for neumorphism */
-  --color-shadow-dark: #000000cc; /* strong dark shadow */
-  --color-text-primary: #f9f4e7; /* warm ivory */
-  --color-text-muted: #a5926e; /* muted gold beige */
-  --color-accent: #bfa051; /* rich gold */
-  --color-accent-hover: #d7b75c; /* brighter gold hover */
-  --color-border: #2a2a2a; /* dark border subtle */
+  --color-bg: #121212;
+  --color-card-bg: #1f1f1f;
+  --color-shadow-light: #2b2b2b;
+  --color-shadow-dark: #000000cc;
+  --color-text-primary: #f9f4e7;
+  --color-text-muted: #a5926e;
+  --color-accent: #bfa051;
+  --color-accent-hover: #d7b75c;
+  --color-border: #2a2a2a;
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
   --border-radius: 1rem;
@@ -25,7 +23,6 @@
   --shadow-btn: 0 5px 20px rgba(191,160,81,0.6);
 }
 
-/* Global reset */
 *,
 *::before,
 *::after {
@@ -48,7 +45,6 @@ body {
   user-select: none;
 }
 
-/* Utility Class for accessibility */
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -61,7 +57,6 @@ body {
   border: 0 !important;
 }
 
-/* Containers */
 .container-header,
 main,
 .form-section,
@@ -73,7 +68,6 @@ main,
   padding-right: var(--spacing-sm);
 }
 
-/* Header */
 header {
   background-color: var(--color-bg);
   position: sticky;
@@ -96,7 +90,6 @@ header {
   gap: var(--spacing-md);
 }
 
-/* Logo */
 .logo {
   height: 48px;
   width: auto;
@@ -104,7 +97,6 @@ header {
   user-select: none;
 }
 
-/* Navigation */
 nav ul.nav-menu {
   list-style: none;
   display: flex;
@@ -153,14 +145,12 @@ nav ul.nav-menu a[aria-current="page"] {
   outline: none;
 }
 
-/* Main Content Area */
 main {
   flex-grow: 1;
   padding-top: var(--spacing-lg);
   padding-bottom: var(--spacing-lg);
 }
 
-/* Hero Section */
 .hero {
   position: relative;
   max-width: 900px;
@@ -216,7 +206,6 @@ main {
   font-style: italic;
 }
 
-/* Hero CTA Button */
 .hero-cta {
   margin-top: var(--spacing-lg);
   display: inline-block;
@@ -243,21 +232,18 @@ main {
   outline: none;
 }
 
-/* Section Padding */
 .form-section,
 .produtos {
   padding-top: var(--spacing-lg);
   padding-bottom: var(--spacing-lg);
 }
 
-/* Products Grid */
 .produtos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: var(--spacing-lg);
 }
 
-/* Product Card */
 .produto {
   background: var(--color-card-bg);
   border-radius: var(--border-radius);
@@ -320,195 +306,4 @@ main {
   margin-bottom: var(--spacing-sm);
   color: var(--color-accent);
   font-weight: 900;
-  font-size: 1.75rem;
-  letter-spacing: 0.06em;
-  user-select: text;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
-}
-
-.produto .preco {
-  font-weight: 700;
-  color: var(--color-text-primary);
-  font-size: 1.3rem;
-  margin-bottom: var(--spacing-md);
-  user-select: text;
-  font-style: italic;
-}
-
-/* Buttons */
-button,
-button[type="submit"] {
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
-  color: var(--color-bg);
-  border: none;
-  border-radius: var(--border-radius);
-  padding: 1.1rem 3rem;
-  font-size: 1.3rem;
-  font-weight: 900;
-  cursor: pointer;
-  transition: background 0.35s ease, box-shadow 0.4s ease, transform 0.3s ease;
-  box-shadow: var(--shadow-btn);
-  user-select: none;
-  display: inline-block;
-  text-align: center;
-  min-width: 180px;
-  text-shadow: 0 0 4px rgba(0,0,0,0.8);
-}
-
-button:hover,
-button:focus {
-  background: linear-gradient(135deg, var(--color-accent-hover), var(--color-accent));
-  outline: none;
-  transform: scale(1.12);
-  box-shadow: 0 14px 46px rgba(191,160,81,0.9);
-}
-
-button:focus-visible {
-  outline: 3px solid var(--color-accent);
-  outline-offset: 6px;
-}
-
-/* Form Styling */
-form.formulario {
-  max-width: 540px;
-  margin: 0 auto;
-  background: var(--color-card-bg);
-  border-radius: var(--border-radius);
-  padding: var(--spacing-lg);
-  box-shadow:
-    inset 8px 8px 18px var(--color-shadow-dark),
-    inset -8px -8px 18px var(--color-shadow-light);
-  user-select: none;
-  color: var(--color-text-muted);
-}
-
-form fieldset {
-  border: none;
-  margin-bottom: var(--spacing-lg);
-}
-
-form legend {
-  font-weight: 900;
-  font-size: 1.9rem;
-  color: var(--color-accent);
-  margin-bottom: var(--spacing-md);
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  text-shadow: 0 3px 10px rgba(191,160,81,0.75);
-}
-
-form label {
-  display: block;
-  font-weight: 700;
-  margin-bottom: 0.8rem;
-  color: var(--color-text-primary);
-  user-select: text;
-}
-
-form input[type="text"],
-form input[type="email"],
-form input[type="password"] {
-  width: 100%;
-  padding: 1rem 1.4rem;
-  border-radius: var(--border-radius);
-  border: none;
-  font-size: 1.2rem;
-  font-family: var(--font-body);
-  background-color: var(--color-bg);
-  color: var(--color-text-primary);
-  box-shadow:
-    inset 6px 6px 15px var(--color-shadow-dark),
-    inset -6px -6px 15px var(--color-shadow-light);
-  transition: box-shadow 0.4s ease;
-  user-select: text;
-}
-
-form input::placeholder {
-  color: var(--color-text-muted);
-  font-style: italic;
-}
-
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form input[type="password"]:focus {
-  outline: none;
-  box-shadow:
-    0 0 20px 6px var(--color-accent);
-  color: var(--color-text-primary);
-}
-
-/* Footer */
-footer {
-  margin-top: var(--spacing-lg);
-  padding: var(--spacing-md);
-  border-top: 1px solid var(--color-border);
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  user-select: none;
-}
-
-footer a {
-  color: var(--color-accent);
-  text-decoration: none;
-  font-weight: 700;
-  transition: text-decoration 0.3s ease;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.55);
-}
-
-footer a:hover,
-footer a:focus {
-  text-decoration: underline;
-  outline: none;
-}
-
-/* Navigation Buttons in Carrinho Page */
-.acoes-carrinho {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
-  flex-wrap: wrap;
-}
-
-.acoes-carrinho a button {
-  min-width: 180px;
-}
-
-/* Responsive Images */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  user-select: none;
-  border-radius: var(--border-radius);
-  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.85));
-}
-
-/* Inputs and buttons touch friendly */
-input,
-button {
-  -webkit-tap-highlight-color: transparent;
-  user-select: text;
-}
-
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-  width: 8px;
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-accent);
-  border-radius: 16px;
-  box-shadow: inset 0 0 8px rgba(0,0,0,0.85);
-}
-
-/* Form submit button full width on mobile */
-@media (max-width: 480px) {
-  button,
-  button[type="submit"] {
-    width: 100%;
-    min-width: auto;
-  }
 }

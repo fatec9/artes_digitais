@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Cadastre-se para participar do leilão de artes digitais e tenha acesso a obras únicas.">
+  <meta name="author" content="Leilão de Artes Digitais">
+  <title>Cadastro de Clientes - Leilão de Artes Digitais</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body>
+  <header>
+    <div class="container-header">
+      <img src="" alt="" class="logo" />
+      <nav aria-label="Menu principal">
+        <ul class="nav-menu">
+          <li><a href="inicial.html">Início</a></li>
+          <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+          <li><a href="carrinho.html">Carrinho</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-section" aria-labelledby="titulo-cadastro">
+      <h1 id="titulo-cadastro">Cadastro de Clientes</h1>
+      <p>Preencha os campos abaixo para participar de nossos leilões exclusivos.</p>
+
+      <form class="formulario" action="#" method="post" autocomplete="on">
+        <fieldset>
+          <legend>Informações Pessoais</legend>
+
+          <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+          <input type="text" id="nome" name="nome" required autocomplete="name" />
+
+          <label for="email">E-mail <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+
+          <label for="senha">Senha <span aria-hidden="true">*</span></label>
+          <input type="password" id="senha" name="senha" required minlength="6" autocomplete="new-password" />
+        </fieldset>
+
+        <button type="submit" aria-label="Enviar cadastro">Cadastrar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <address>
+      <p>&copy; 2025 Fatec<br>
+      Contato: <a href="mailto:contato@leilaodigital.com">contato@leilaodigital.com</a></p>
+    </address>
+  </footer>
+</body>
+</html>
